@@ -15,7 +15,10 @@ services:
       - wpnet
 
   wordpress:
-    image: wordpress:6.8.2-php8.2-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: woltk-wordpress:local
     container_name: woltk_portal_wp
     restart: unless-stopped
     depends_on:
@@ -33,6 +36,7 @@ services:
     volumes:
       - wp_data:/var/www/html
       - ./theme/woltk-portal:/var/www/html/wp-content/themes/woltk-portal
+      - ./wordpress/wp-content/plugins/woltk-create-account:/var/www/html/wp-content/plugins/woltk-create-account
     networks:
       - wpnet
 
