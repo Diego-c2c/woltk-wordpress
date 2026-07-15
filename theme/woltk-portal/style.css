@@ -1,0 +1,113 @@
+/*
+Theme Name: WoTLK Portal
+Author: Diego
+Version: 1.0
+Description: Portail WordPress WoTLK prêt à déployer.
+*/
+
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-2: #1f2937;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-2: #0ea5e9;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: var(--text);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #7dd3fc; }
+.site-header, .site-footer {
+  background: rgba(2, 6, 23, 0.92);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.site-footer { border-bottom: 0; border-top: 1px solid rgba(255,255,255,0.08); }
+.wrap {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+.site-header .wrap,
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+.brand {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.hero {
+  padding: 80px 0 56px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  color: var(--muted);
+  font-size: 18px;
+}
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #082f49;
+}
+.btn-secondary {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.section {
+  padding: 28px 0 64px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: rgba(17, 24, 39, 0.92);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 22px;
+}
+.card h3 { margin-top: 0; }
+.page-content {
+  padding: 48px 0 64px;
+}
+.page-content h1 { margin-top: 0; }
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .site-header .wrap, .site-footer .wrap { flex-direction: column; gap: 12px; }
+}
